@@ -33,14 +33,13 @@ class SimpleWidgetContent : GlanceAppWidget() {
         Column(
             modifier = GlanceModifier
                 .fillMaxSize()
-                .background(GlanceTheme.colors.background)
-                .padding(12.dp),
+                .background(GlanceTheme.colors.background),
             verticalAlignment = Alignment.Top,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
                 text = "¿A dónde quieres dirigirte?",
-                modifier = GlanceModifier.padding(bottom = 8.dp),
+                modifier = GlanceModifier.padding(12.dp),
             )
             Row(horizontalAlignment = Alignment.CenterHorizontally) {
                 Button(
