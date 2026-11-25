@@ -18,6 +18,7 @@ import androidx.glance.layout.fillMaxSize
 import androidx.glance.layout.padding
 import androidx.glance.text.Text
 import com.example.lab14_android.MainActivity
+import com.example.lab14_android.WorkActivity
 
 class SimpleWidgetContent : GlanceAppWidget() {
     override suspend fun provideGlance(context: Context, id: GlanceId) {
@@ -43,8 +44,12 @@ class SimpleWidgetContent : GlanceAppWidget() {
             )
             Row(horizontalAlignment = Alignment.CenterHorizontally) {
                 Button(
-                    text = "Página Principal",
+                    text = "Inicio",
                     onClick = actionStartActivity<MainActivity>(),
+                )
+                Button(
+                    text = "Trabajo",
+                    onClick = actionStartActivity<WorkActivity>(),
                 )
             }
         }
