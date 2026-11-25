@@ -89,15 +89,21 @@ private fun WidgetSetupScreen() {
                     fontWeight = FontWeight.SemiBold,
                 )
                 Text(
-                    text = "¿A dónde quieres dirigirte?",
-                    style = MaterialTheme.typography.bodyLarge,
+                    text = "LAB 14 · ACCESOS RÁPIDOS",
+                    style = MaterialTheme.typography.titleSmall,
                     color = Color(0xFF183153),
+                    fontWeight = FontWeight.SemiBold,
                 )
                 Text(
                     text = "Dante Gonzales",
                     style = MaterialTheme.typography.bodyMedium,
                     color = Color(0xFF65758C),
                     fontWeight = FontWeight.Medium,
+                )
+                Text(
+                    text = "Elige la vista que quieres abrir",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = Color(0xFF65758C),
                 )
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     Button(
