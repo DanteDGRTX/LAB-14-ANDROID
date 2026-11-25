@@ -1,5 +1,6 @@
 package com.example.lab14_android
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
@@ -68,7 +70,7 @@ private fun WidgetSetupScreen() {
             color = Color(0xFF42536B),
         )
         Text(
-            text = "El botón del widget abre esta aplicación mediante una acción de Glance.",
+            text = "El widget ofrece accesos directos a la pantalla principal y a una vista de trabajo independiente.",
             style = MaterialTheme.typography.bodyMedium,
             color = Color(0xFF65758C),
         )
@@ -97,12 +99,21 @@ private fun WidgetSetupScreen() {
                     color = Color(0xFF65758C),
                     fontWeight = FontWeight.Medium,
                 )
-                Button(
-                    onClick = {
-                        Toast.makeText(context, "Ya estás en la página principal", Toast.LENGTH_SHORT).show()
-                    },
-                ) {
-                    Text("Página Principal")
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Button(
+                        onClick = {
+                            Toast.makeText(context, "Ya estás en la página principal", Toast.LENGTH_SHORT).show()
+                        },
+                    ) {
+                        Text("Inicio")
+                    }
+                    Button(
+                        onClick = {
+                            context.startActivity(Intent(context, WorkActivity::class.java))
+                        },
+                    ) {
+                        Text("Trabajo")
+                    }
                 }
             }
         }
