@@ -15,6 +15,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".WorkActivity"
+            android:exported="false" />
+
         <receiver
             android:name=".widget.SimpleWidget"
             android:exported="true">
