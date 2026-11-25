@@ -4,14 +4,19 @@ Proyecto de Android Studio en Kotlin y Jetpack Compose. Integra un widget de pan
 
 ## Widget incluido
 
-El widget muestra el mensaje **«¿A dónde quieres dirigirte?»**, el nombre **Dante Gonzales** y un botón **Página Principal** que abre `MainActivity` mediante `actionStartActivity`. La pantalla principal también muestra una vista previa de ese contenido. Puede cambiar de tamaño horizontal y verticalmente desde el launcher.
+El widget muestra el mensaje **«¿A dónde quieres dirigirte?»**, el nombre **Dante Gonzales** y dos accesos directos:
+
+- **Inicio** abre `MainActivity`.
+- **Trabajo** abre `WorkActivity`, una vista independiente con la opción de volver al inicio.
+
+Ambos destinos se conectan mediante `actionStartActivity` de Glance. La pantalla principal incluye una vista previa con los mismos dos destinos. El widget puede cambiar de tamaño horizontal y verticalmente desde el launcher.
 
 ## Probarlo en un emulador o dispositivo
 
 1. Abre la carpeta `D:\LAB 14-ANDROID` en Android Studio y espera la sincronización de Gradle.
 2. Ejecuta la configuración `app` para instalar la aplicación.
 3. Regresa a la pantalla de inicio, mantén presionado un espacio vacío y abre **Widgets**.
-4. Busca **Lab 14 - Glance**, arrastra el widget a la pantalla y prueba el botón.
+4. Busca **Lab 14 - Glance**, arrastra el widget a la pantalla y prueba **Inicio** y **Trabajo**.
 
 ## Configuración técnica
 
