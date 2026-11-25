@@ -38,7 +38,7 @@ class SimpleWidgetContent : GlanceAppWidget() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "¿A dónde quieres dirigirte?",
+                text = "¿A dónde quieres dirigirte?\nDante Gonzales",
                 modifier = GlanceModifier.padding(12.dp),
             )
             Row(horizontalAlignment = Alignment.CenterHorizontally) {

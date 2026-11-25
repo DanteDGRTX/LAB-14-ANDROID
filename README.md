@@ -4,7 +4,7 @@ Proyecto de Android Studio en Kotlin y Jetpack Compose. Integra un widget de pan
 
 ## Widget incluido
 
-El widget muestra el mensaje **«¿A dónde quieres dirigirte?»** y un botón **Página Principal** que abre `MainActivity` mediante `actionStartActivity`. Puede cambiar de tamaño horizontal y verticalmente desde el launcher.
+El widget muestra el mensaje **«¿A dónde quieres dirigirte?»**, el nombre **Dante Gonzales** y un botón **Página Principal** que abre `MainActivity` mediante `actionStartActivity`. La pantalla principal también muestra una vista previa de ese contenido. Puede cambiar de tamaño horizontal y verticalmente desde el launcher.
 
 ## Probarlo en un emulador o dispositivo
 

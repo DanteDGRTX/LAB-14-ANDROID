@@ -1,20 +1,26 @@
 package com.example.lab14_android
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
@@ -36,6 +42,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun WidgetSetupScreen() {
+    val context = LocalContext.current
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -65,5 +72,39 @@ private fun WidgetSetupScreen() {
             style = MaterialTheme.typography.bodyMedium,
             color = Color(0xFF65758C),
         )
+        Card(modifier = Modifier.fillMaxWidth()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(20.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                Text(
+                    text = "Vista previa del widget",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = Color(0xFF315B91),
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Text(
+                    text = "¿A dónde quieres dirigirte?",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = Color(0xFF183153),
+                )
+                Text(
+                    text = "Dante Gonzales",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = Color(0xFF65758C),
+                    fontWeight = FontWeight.Medium,
+                )
+                Button(
+                    onClick = {
+                        Toast.makeText(context, "Ya estás en la página principal", Toast.LENGTH_SHORT).show()
+                    },
+                ) {
+                    Text("Página Principal")
+                }
+            }
+        }
     }
 }
