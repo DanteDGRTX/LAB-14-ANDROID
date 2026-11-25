@@ -4,12 +4,18 @@ Proyecto de Android Studio en Kotlin y Jetpack Compose. Integra un widget de pan
 
 ## Widget incluido
 
-El widget muestra el mensaje **«¿A dónde quieres dirigirte?»**, el nombre **Dante Gonzales** y dos accesos directos:
+El widget muestra la marca **LAB 14 · ACCESOS RÁPIDOS**, el nombre **Dante Gonzales**, una indicación breve y dos accesos directos:
 
 - **Inicio** abre `MainActivity`.
 - **Trabajo** abre `WorkActivity`, una vista independiente con la opción de volver al inicio.
 
 Ambos destinos se conectan mediante `actionStartActivity` de Glance. La pantalla principal incluye una vista previa con los mismos dos destinos. El widget puede cambiar de tamaño horizontal y verticalmente desde el launcher.
+
+## Diseño del widget
+
+El diseño sigue el patrón de barra de acciones recomendado para widgets Android: identidad del laboratorio, nombre del usuario, una instrucción breve y dos acciones principales. Mantiene una jerarquía de lectura sencilla y utiliza los colores de `GlanceTheme` para integrarse con el launcher. La altura mínima de 160 dp deja espacio para el contenido y los botones.
+
+Referencias: [Android UI Kit de widgets en Figma](https://www.figma.com/community/file/1237551184114564748/android-ui-kit) y [guías oficiales de diseño de widgets Android](https://developer.android.com/design/ui/widget).
 
 ## Probarlo en un emulador o dispositivo
 
